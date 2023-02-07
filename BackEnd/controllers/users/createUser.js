@@ -12,9 +12,9 @@ const createUser = async (req, res) => {
       data: theUser,
     });
   } catch (err) {
-    res.status(404).json({
+    res.status(500).json({
       status: 'failed',
-      message: err,
+      error: err,
     });
   }
 };
