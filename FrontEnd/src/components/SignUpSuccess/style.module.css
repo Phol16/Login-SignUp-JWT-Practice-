@@ -1,0 +1,10 @@
+.signUpSuccessContainer{
+  background: rgba(34, 75, 100, 0.8);
+  color: white;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0,159,255,0.25);
+  border-radius: 5px;
+  padding: 25px 15px;
+  width: 300px;
+}
