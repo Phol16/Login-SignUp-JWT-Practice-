@@ -55,6 +55,7 @@ const SignUp = ({ setSuccess }) => {
       const response = await axios.post(REGISTER_URL, JSON.stringify({ username: user, password }), {
         headers: { 'Content-Type': 'application/json' },
       });
+      console.log(response);
       setSuccess(true); // setting the value of the function as true so that parent compnent will get the value
     } catch (error) {
       console.log(error)
