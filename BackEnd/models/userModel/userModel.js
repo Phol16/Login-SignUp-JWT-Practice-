@@ -10,12 +10,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Must have a password'], // response this error
   },
-  createdAt:{
-    type: Date,
-    default: Date.now(),
-    select: false, //this will exclude in sending to the client
-  }
-});
+},{timestamps: true});
 
 const userModel = mongoose.model('User', userSchema);
 export default userModel;
