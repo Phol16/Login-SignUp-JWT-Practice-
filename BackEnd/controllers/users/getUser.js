@@ -1,10 +1,13 @@
+import User from '../../models/userModel/userModel.js';
 
-const getUser = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    requestedAt: req.requestDate,
-    data: `data here ${req.params.id}`,
-  })
-}
+const getUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findById(id);
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
 
-export default getUser
+export default getUser;

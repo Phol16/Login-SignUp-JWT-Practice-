@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
     res.status(500).json({
       status: 'failed',
       requestedAt: req.requestDate,
-      error: err,
+      message: err.message,
     });
   }
 };
